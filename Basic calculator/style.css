@@ -1,0 +1,27 @@
+button{
+    width: 80px;
+    background-color: tomato;
+    padding: 10px;
+    color:white;
+    border: 1px solid #f1f1f1;
+}
+
+button:hover{
+    background-color:white;
+    color: tomato;  
+}
+
+#display{
+    width: 292px;
+    padding:20px;
+    margin: 0px 0px 5px 0px;
+    background-color: black;
+    color: white;
+    height: 20px;
+}
+
+.container{
+    padding: 20px;
+    background-color: teal;
+    width: fit-content; 
+}
