@@ -25,3 +25,11 @@ button:hover{
     background-color: teal;
     width: fit-content; 
 }
+
+#center{
+    margin-top: 100px;
+    align-self: center;
+    align-items: center;
+    height: 350px;  
+    width: 60px;
+}
