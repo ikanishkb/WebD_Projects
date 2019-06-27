@@ -1,10 +1,22 @@
-var colors = generateRandomColors(6);
+var numberOfSquares = 6;
+var colors = generateRandomColors(numberOfSquares);
 var squares = document.getElementsByClassName("square");
 var pickedcolor = pickColor();
 var messageDisplay = document.getElementById("message");
 var colorDisplay = document.getElementById("rgb");
 colorDisplay.textContent = pickedcolor;
 var h1 = document.querySelector("h1");
+var resetButton = document.getElementById("reset");
+
+resetButton.addEventListener("click",function(){
+    colors = generateRandomColors(numberOfSquares);
+    pickedcolor = pickColor();
+    colorDisplay.textContent = pickedcolor;
+    for(var i=0; i<squares.length; i++){
+        squares[i].style.backgroundColor = colors[i];
+        h1.style.backgroundColor = "#232323";
+    }
+})
 
 for(var i=0;i<squares.length;i++){
     squares[i].style.backgroundColor = colors[i];
@@ -14,6 +26,7 @@ for(var i=0;i<squares.length;i++){
             messageDisplay.textContent = "Correct guess!"
             changeColor(clickedcolor);
             h1.style.backgroundColor = clickedcolor;
+            resetButton.textContent = "Play Again";
         }
         else{
             this.style.backgroundColor = "#232323";
@@ -50,3 +63,39 @@ function randomColors(){
     console.log(string);
     return string;
 }
+
+var easybtn = document.getElementById("easybtn");
+var hardbtn = document.getElementById("hardbtn");
+
+easybtn.addEventListener("click",function(){
+    numberOfSquares = 3;
+    easybtn.classList.add("selected");
+    hardbtn.classList.remove("selected");
+    colors = generateRandomColors(numberOfSquares);
+    pickedcolor = pickColor();
+    colorDisplay.textContent = pickedcolor;
+    for(var i=0; i<squares.length; i++){
+        if(colors[i]){
+            squares[i].style.backgroundColor=colors[i];
+        }
+        else{
+            squares[i].style.display = "none";
+        }
+        squares[i].style.backgroundColor = colors[i];
+        h1.style.backgroundColor = "#232323";
+    }
+})
+
+hardbtn.addEventListener("click",function(){
+    numberOfSquares = 6;
+    hardbtn.classList.add("selected");
+    easybtn.classList.remove("selected");
+    colors = generateRandomColors(numberOfSquares);
+    pickedcolor = pickColor();
+    colorDisplay.textContent = pickedcolor;
+    for(var i=0; i<squares.length; i++){
+        squares[i].style.backgroundColor=colors[i];
+        squares[i].style.display = "block";
+        h1.style.backgroundColor = "#232323";
+    }
+})
