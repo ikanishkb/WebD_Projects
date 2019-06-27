@@ -9,12 +9,14 @@ var h1 = document.querySelector("h1");
 var resetButton = document.getElementById("reset");
 
 resetButton.addEventListener("click",function(){
+    messageDisplay.textContent = ""
+    resetButton.textContent = "NEW COLORS";
     colors = generateRandomColors(numberOfSquares);
     pickedcolor = pickColor();
     colorDisplay.textContent = pickedcolor;
     for(var i=0; i<squares.length; i++){
         squares[i].style.backgroundColor = colors[i];
-        h1.style.backgroundColor = "#232323";
+        h1.style.backgroundColor = "steeleblue";
     }
 })
 
@@ -82,7 +84,7 @@ easybtn.addEventListener("click",function(){
             squares[i].style.display = "none";
         }
         squares[i].style.backgroundColor = colors[i];
-        h1.style.backgroundColor = "#232323";
+        h1.style.backgroundColor = "steeleblue";
     }
 })
 
@@ -96,6 +98,6 @@ hardbtn.addEventListener("click",function(){
     for(var i=0; i<squares.length; i++){
         squares[i].style.backgroundColor=colors[i];
         squares[i].style.display = "block";
-        h1.style.backgroundColor = "#232323";
+        h1.style.backgroundColor = "steeleblue";
     }
 })
