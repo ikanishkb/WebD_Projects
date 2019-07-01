@@ -8,12 +8,20 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-        <div class="container">
-        <div id="display"></div>
-        <div class="conatinermbox fixed-bottom"><input class="d-flex p-2 bd-highlight" type="text" id="messageBox"/>
-        <button onclick="send()" id="sendBtn">Send</button>
+        <div class="row">
+            <div class="col-md-4 p-0 m-0"></div>
+            <div class="col-md-4 p-0 m-0">
+                    <div class="container">
+                            <div id="display"></div>
+                    </div>
+                    <div class="conatinermbox mx-auto justify-content-center">
+                        <input type="text" id="messageBox"/>
+                        <button onclick="send()" id="sendBtn">Send</button>
+                    </div>
+            </div>
+            <div class="col-md- p-0 m-0"></div>
         </div>
-        </div>
+        
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-database.js"></script>

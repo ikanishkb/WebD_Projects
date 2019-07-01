@@ -5,7 +5,7 @@ body{
 /* #messageBox{
 
 } */
-
+ 
 #para{
     margin: 3px;
     background-color: #c3f2b0;
@@ -15,8 +15,19 @@ body{
     display: inline-block;
     justify-content: center;
     text-align: center;
+    margin-top: 100px;
+    height:400px;
+    overflow-y: auto;
 }
 
-.containermbox{
-    display: inline-block;
+input{
+    display: inline-block; 
+    width: 100%;
+}
+
+#sendBtn{
+    padding: 4px;
+    margin-top: 0px;
+    margin-left: 43%;
+    margin-right: 40%;
 }
