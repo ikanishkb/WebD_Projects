@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Chat App
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+        <div id="display"></div>
+        <div class="conatinermbox fixed-bottom"><input class="d-flex p-2 bd-highlight" type="text" id="messageBox"/>
+        <button onclick="send()" id="sendBtn">Send</button>
+        </div>
+        </div>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-firestore.js"></script>
+
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#config-web-app -->
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAo0MmwwRVx2zAMlpdbw-L94vPzep08JTI",
+            authDomain: "chat-app-6c7ca.firebaseapp.com",
+            databaseURL: "https://chat-app-6c7ca.firebaseio.com",
+            projectId: "chat-app-6c7ca",
+            storageBucket: "",
+            messagingSenderId: "387264082107",
+            appId: "1:387264082107:web:f58ca956d1b6fd38"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        </script>
+
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+        <script src="main.js"></script>
+    </body>
+</html>

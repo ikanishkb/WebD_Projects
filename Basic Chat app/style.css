@@ -1,0 +1,22 @@
+body{
+    background-image: url("https://backgrounddownload.com/wp-content/uploads/2018/09/chat-app-background-4.jpg");
+}
+
+/* #messageBox{
+
+} */
+
+#para{
+    margin: 3px;
+    background-color: #c3f2b0;
+}
+
+.container{
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+}
+
+.containermbox{
+    display: inline-block;
+}
