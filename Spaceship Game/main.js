@@ -29,7 +29,7 @@ $(document).ready(function(){
 
     wall.css({
         position:"absolute",
-        right:50,
+        left:1150,
     })
 
     $(document).on("keydown", function(e){
@@ -113,7 +113,7 @@ $(document).ready(function(){
                         display:"block",
                         left:spaceship.position().left+150+"px",
                         top:spaceship.position().top+50+"px",
-                    }).animate({left:763.015625},1000,function(){
+                    }).animate({left:1150},1000,function(){
                         bulletState = "available";
                         console.log(bullet.position());
                         console.log(wall.position());
@@ -145,12 +145,12 @@ $(document).ready(function(){
     function over(){
         clearInterval(moveRef);
         clearInterval(moveObstacleRef);
-        clearInterval(scorecard);
+        // clearInterval(scorecard);
         alert("Game Over!!");
     }
 
     var moveRef = setInterval(move,10);
     var moveObstacleRef = setInterval(moveWall,500);
-    var scorecard = setInterval(hit,500);
+    // var scorecard = setInterval(hit,500);
     setTimeout(over,30000);
 })
