@@ -2,22 +2,19 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import Tictactoe from './tictactoe';
+import App from './App.js';
 
-class App extends Component {
-
+class Index extends Component {
     render() {
         return (
             <div>
-                <Tictactoe/>
+                <App/>
             </div>
         );
     }
 }
 
-
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Index />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
