@@ -8,6 +8,10 @@ const styles={
         width:'35%',
         height:'45%',
         marginTop:'3%'
+    },
+    about:{
+        margin:'10px',
+        fontSize:'15px'
     }
 }
 class propertyDescription extends Component{
@@ -43,9 +47,15 @@ class propertyDescription extends Component{
                     <h2>Price : INR {this.state.description.price}</h2>
                 </Grid>
                 <Grid container justify="center">
-                <h2>Location : {this.state.description.location}</h2>
+                    <h2>Location : {this.state.description.location}</h2>
                 </Grid>
-
+                <Grid container justify="center">
+                    <h3>About The Property : </h3>
+                    <br/>
+                    <Grid item md={6}>
+                        <p style={styles.about}>{this.state.description.about}</p>
+                    </Grid>
+                </Grid>
             </Fragment>
         )
 
