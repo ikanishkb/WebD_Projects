@@ -12,6 +12,7 @@ const styles = {
         minHeight: "91.5vh",
     }
 }
+
 export default class Home extends Component {
     render() {
         return (
